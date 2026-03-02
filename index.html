@@ -30,7 +30,7 @@ scroll-behavior:smooth;
 cursor:none;
 }
 
-/* Custom Cursor */
+/* Cursor */
 .cursor{
 position:fixed;
 width:18px;
@@ -66,7 +66,7 @@ font-size:14px;
 
 /* Sections */
 section{
-padding:120px 80px;
+padding:140px 40px;
 max-width:1100px;
 margin:auto;
 opacity:0;
@@ -137,25 +137,28 @@ box-shadow:0 0 25px var(--accent);
 
 .btn-outline{
 border:1px solid var(--accent);
-color:var(--accent);
+color:var(--accent;
 }
 
-/* Skills */
-.skill{margin-bottom:25px;}
-
-.skill-bar{
-height:6px;
-background:#12233f;
-border-radius:6px;
-overflow:hidden;
+/* ABOUT FIXED STYLE */
+#about p{
+max-width:750px;
+line-height:1.8;
+color:var(--dim);
+margin-bottom:20px;
 }
 
-.skill-fill{
-height:100%;
-background:var(--accent);
+#about ul{
+max-width:750px;
+margin:15px 0 20px 20px;
+color:var(--dim);
 }
 
-/* Projects */
+#about li{
+margin-bottom:8px;
+}
+
+/* Project Grid (used for skills & projects) */
 .project-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -164,7 +167,7 @@ gap:25px;
 
 .project-card{
 background:var(--card);
-padding:20px;
+padding:25px;
 border-radius:10px;
 border:1px solid #112240;
 transition:0.3s;
@@ -179,7 +182,7 @@ box-shadow:0 0 25px rgba(0,212,255,0.3);
 .project-card p{
 color:var(--dim);
 font-size:14px;
-margin:10px 0;
+margin:8px 0;
 }
 
 .project-card a{
@@ -188,8 +191,7 @@ text-decoration:none;
 font-size:14px;
 }
 
-/* ================= GITHUB SECTION ================= */
-
+/* GitHub Section */
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -219,50 +221,6 @@ font-family:'Orbitron';
 margin-bottom:10px;
 }
 
-.github-flex{
-display:flex;
-gap:40px;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.languages{
-flex:1;
-min-width:280px;
-}
-
-.lang{
-margin-bottom:20px;
-}
-
-.lang-bar{
-height:6px;
-background:#12233f;
-border-radius:6px;
-overflow:hidden;
-}
-
-.lang-bar div{
-height:100%;
-background:var(--accent);
-}
-
-.profile-card{
-flex:1;
-min-width:280px;
-background:var(--card);
-padding:30px;
-border-radius:10px;
-border:1px solid #112240;
-text-align:center;
-}
-
-.profile-card p{
-color:var(--dim);
-margin-bottom:20px;
-}
-
-/* Footer */
 footer{
 text-align:center;
 padding:40px;
@@ -305,28 +263,16 @@ and real-time embedded system design.
 <h2>About Me</h2>
 
 <p>
-Hi, I'm <strong>Anora Sharon Tessie S</strong> — an Embedded Firmware Engineer passionate about
-designing intelligent hardware–software integrated systems.
-I specialize in low-level system design, interrupt-driven firmware architecture,
-real-time embedded systems, and deterministic embedded design.
+Hi, I'm <strong>Anora Sharon Tessie S</strong> — an Embedded Firmware Engineer passionate about designing intelligent hardware–software integrated systems. I specialize in low-level system design, interrupt-driven firmware architecture, real-time embedded systems, and deterministic embedded design.
 </p>
-
-<br>
 
 <p>
-I have strong foundations in <strong>C and Embedded C</strong>, microcontroller-based
-system development, and memory-efficient firmware engineering.
-My work focuses on building modular, scalable, and event-driven embedded architectures
-using platforms such as <strong>MSP430, ESP32, and ARM-based systems</strong>.
+I have strong foundations in <strong>C and Embedded C</strong>, microcontroller-based system development, and memory-efficient firmware engineering. My work focuses on building modular, scalable, and event-driven embedded architectures using platforms such as <strong>MSP430, ESP32, and ARM-based systems</strong>.
 </p>
 
-<br>
+<p><strong>Core Technical Strengths:</strong></p>
 
-<p>
-My core technical strengths include:
-</p>
-
-<ul style="color:var(--dim); margin-top:10px; line-height:1.8;">
+<ul>
 <li>Interrupt Service Routine (ISR) based firmware design</li>
 <li>RTOS task scheduling and inter-task communication</li>
 <li>Hardware–software integration and peripheral control</li>
@@ -335,23 +281,16 @@ My core technical strengths include:
 <li>State machine and modular architecture design</li>
 </ul>
 
-<br>
-
 <p>
-Alongside firmware development, I actively explore <strong>AI, Computer Vision,
-and Edge AI optimization</strong>. I build CNN-based models and deploy
-lightweight ML inference systems on embedded platforms
-using TinyML and TensorFlow Lite.
+Alongside firmware development, I actively explore AI, Computer Vision, and Edge AI optimization. I build CNN-based models and deploy lightweight ML inference systems on embedded platforms using TinyML and TensorFlow Lite.
 </p>
 
-<br>
-
 <p>
-My projects range from autonomous robots and interrupt-driven event systems
-to arbitrary precision computation engines, LSB-based steganography tools,
-and AI-powered waste classification systems.
+My projects range from autonomous robots and interrupt-driven event systems to arbitrary precision computation engines, LSB-based steganography tools, and AI-powered waste classification systems.
 </p>
+</section>
 
+<!-- Skills, Projects, GitHub, Contact remain same as your previous structure -->
 <section id="skills">
 <div class="section-number">02.</div>
 <h2>Technical Skills</h2>
@@ -495,6 +434,9 @@ Open GitHub Profile
 <footer>
 © 2026 Anora Sharon Tessie S | Embedded Firmware Engineer
 </footer>
+<footer>
+© 2026 Anora Sharon Tessie S | Embedded Firmware Engineer
+</footer>
 
 <script>
 const cursor = document.querySelector(".cursor");
@@ -516,3 +458,4 @@ sec.classList.add("show");
 
 </body>
 </html>
+
