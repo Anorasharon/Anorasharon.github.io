@@ -11,28 +11,37 @@
             color: #e2e8f0;
         }
         header {
-            padding: 40px;
+            padding: 50px;
             text-align: center;
             background: #1e293b;
         }
         h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 38px;
         }
         section {
             padding: 40px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
         }
         h2 {
             border-bottom: 2px solid #38bdf8;
             padding-bottom: 10px;
+            margin-bottom: 20px;
         }
         .project {
-            margin-bottom: 20px;
-            padding: 15px;
+            margin-bottom: 25px;
+            padding: 20px;
             background: #1e293b;
             border-radius: 8px;
+            transition: 0.3s;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        a {
+            color: #38bdf8;
+            text-decoration: none;
         }
         footer {
             text-align: center;
@@ -46,46 +55,129 @@
 
 <header>
     <h1>Anora Sharon Tessie S</h1>
-    <p>Embedded Firmware Engineer | AI/ML | Edge Systems</p>
+    <p>Embedded Firmware Engineer | Interrupt-Driven Systems | Hardware–Software Integration</p>
+    <p>
+        <a href="https://github.com/Anorasharon" target="_blank">GitHub</a>
+    </p>
 </header>
 
 <section>
     <h2>About Me</h2>
     <p>
-        Embedded Firmware enthusiast focused on interrupt-driven architecture,
-        hardware-software integration, and intelligent edge systems.
+        Embedded Firmware Engineer focused on low-level system design,
+        interrupt-driven architecture, efficient memory handling, and 
+        modular embedded software development.
     </p>
 </section>
 
 <section>
-    <h2>Technical Skills</h2>
-    <p><strong>Programming:</strong> C, Embedded C, Python</p>
-    <p><strong>Embedded:</strong> MSP430, Interrupts, Timers, L298N, Sensor Integration</p>
-    <p><strong>AI:</strong> CNN, Image Classification, Edge AI</p>
+    <h2>Core Embedded Skills</h2>
+    <p><strong>Programming:</strong> C, Embedded C</p>
+    <p><strong>Microcontrollers:</strong> MSP430</p>
+    <p><strong>Concepts:</strong> Interrupt Handling, Timers, GPIO, State Machines</p>
+    <p><strong>Hardware Integration:</strong> L298N Motor Driver, IR Sensors</p>
+    <p><strong>System Design:</strong> Modular Architecture, Event-Driven Firmware</p>
 </section>
 
 <section>
-    <h2>Highlighted Projects</h2>
+    <h2>Embedded & System-Level Projects</h2>
 
     <div class="project">
         <h3>MSP430 Obstacle & Cliff Avoidance Robot</h3>
-        <p>Interrupt-driven firmware with motor control via L298N driver.</p>
+        <p>
+            Designed autonomous navigation firmware using MSP430.
+            Implemented interrupt-driven sensor handling and motor control
+            via L298N driver with real-time decision logic.
+        </p>
+        <a href="https://github.com/Anorasharon/msp430-obstacle-cliff-avoidance-robot" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>Interrupt-Driven Event Processing System</h3>
+        <p>
+            Built modular embedded firmware architecture using hardware interrupts
+            and state-machine based event handling for deterministic system behavior.
+        </p>
+        <a href="https://github.com/Anorasharon/interrupt-driven-event-processing-system" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>Arbitrary Precision Calculator (C)</h3>
+        <p>
+            Implemented large-integer arithmetic using Doubly Linked Lists.
+            Focused on memory management, carry/borrow handling, and modular C design.
+        </p>
+        <a href="https://github.com/Anorasharon/Arbitrary-Precision-Calculator" target="_blank">View on GitHub</a>
     </div>
 
     <div class="project">
         <h3>LSB Image Steganography</h3>
-        <p>Bit-level data embedding in BMP images using C.</p>
+        <p>
+            Developed bit-level data embedding and extraction system in BMP images
+            using LSB manipulation and file handling in C.
+        </p>
+        <a href="https://github.com/Anorasharon/LSB-steganography" target="_blank">View on GitHub</a>
     </div>
 
     <div class="project">
-        <h3>Face Mask Detection</h3>
-        <p>CNN-based real-time detection model.</p>
+        <h3>Address Book Management System</h3>
+        <p>
+            Console-based contact management system implemented in C
+            demonstrating file handling and structured data organization.
+        </p>
+        <a href="https://github.com/Anorasharon/Addressbook-management-system" target="_blank">View on GitHub</a>
     </div>
 
 </section>
 
+<section>
+    <h2>AI & Edge Intelligence Projects</h2>
+
+    <div class="project">
+        <h3>RotSense – Rotten Fruit Detection System</h3>
+        <p>
+            Computer vision system for detecting rotten fruits using trained models,
+            designed for real-time deployment concepts.
+        </p>
+        <a href="https://github.com/Anorasharon/Rot-sense" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>BreatheSafe – Predictive Healthcare with Edge AI</h3>
+        <p>
+            AI-assisted healthcare prediction system integrating model logic
+            with system-level design principles.
+        </p>
+        <a href="https://github.com/Anorasharon/BreatheSafe-Predictive-Healthcare-with-Edge-AI" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>Cleaning Up with AI</h3>
+        <p>
+            Machine learning-based waste classification system exploring
+            data preprocessing and model optimization.
+        </p>
+        <a href="https://github.com/Anorasharon/Cleaning-Up-with-AI" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>Face Mask Detection using Deep Learning</h3>
+        <p>
+            CNN-based computer vision model for real-time mask detection.
+        </p>
+        <a href="https://github.com/Anorasharon/-Face-Mask-Detection-Using-Deep-Learning" target="_blank">View on GitHub</a>
+    </div>
+
+</section>
+</section>
+
+<section>
+    <h2>AI & Computer Vision (Secondary Focus)</h2>
+    <p>Exploring intelligent edge systems with lightweight CNN models and real-time image classification.</p>
+</section>
+
 <footer>
-    © 2026 Anora Sharon Tessie | Built with GitHub Pages
+    © 2026 Anora Sharon Tessie | Embedded Systems Portfolio
 </footer>
 
 </body>
