@@ -1,102 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Anora Sharon Tessie | Embedded Firmware Engineer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anora Sharon Tessie S | Embedded Firmware Engineer</title>
+
+<style>
+:root{
+  --bg:#0b1220;
+  --card:#111a2f;
+  --accent:#00d4ff;
+  --text:#e6f1ff;
+  --dim:#8aa0c6;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+section{
+  padding:70px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+h2{
+  margin-bottom:30px;
+  color:var(--accent);
+  font-size:26px;
+}
+
+p{
+  margin-bottom:14px;
+  color:var(--dim);
+}
+
+nav{
+  position:fixed;
+  width:100%;
+  background:#0b1220;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid #1e2a45;
+  z-index:1000;
+}
+
+nav a{
+  color:var(--accent);
+  text-decoration:none;
+  margin-left:25px;
+  font-size:14px;
+}
+
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-top:80px;
+}
+
+.hero h1{
+  font-size:42px;
+}
+
+.hero span{
+  color:var(--accent);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 22px;
+  background:var(--accent);
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:5px;
+}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:8px;
+  border:1px solid #1e2a45;
+  transition:0.3s;
+}
+
+.card:hover{
+  border-color:var(--accent);
+  transform:translateY(-5px);
+}
+
+.skill-bar{
+  background:#1e2a45;
+  height:6px;
+  border-radius:5px;
+  margin-top:6px;
+  overflow:hidden;
+}
+
+.skill-fill{
+  background:var(--accent);
+  height:100%;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  border-top:1px solid #1e2a45;
+  color:var(--dim);
+}
+</style>
 </head>
+
 <body>
 
 <nav>
-    <div class="logo">ANORA</div>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#github">GitHub</a></li>
-    </ul>
+  <div><strong>ANORA</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+  </div>
 </nav>
 
-<header class="hero">
-    <h1>Hi, I'm <span>Anora</span></h1>
-    <p>Embedded Firmware Engineer | Interrupt-Driven Systems | Hardware–Software Integration</p>
-    <a href="#projects" class="btn">View Projects</a>
-</header>
+<section class="hero">
+  <h1>Hi, I'm <span>Anora</span></h1>
+  <p>Embedded Firmware Engineer | Hardware–Software Integration | Edge AI Enthusiast</p>
+  <a href="#projects" class="btn">View Projects</a>
+</section>
 
 <section id="about">
-    <h2>01. About Me</h2>
-    <p>
-        Embedded Firmware Engineer specializing in low-level system design,
-        interrupt-driven architecture, modular firmware development,
-        and efficient memory-level programming.
-    </p>
+  <h2>About Me</h2>
+  <p>
+    I am an Embedded Firmware Engineer specializing in low-level system design,
+    interrupt-driven architecture, and modular firmware development.
+  </p>
+  <p>
+    I work primarily with C / Embedded C and microcontroller-based systems,
+    focusing on efficient memory usage, real-time execution, and hardware integration.
+  </p>
+  <p>
+    Alongside firmware development, I explore AI and Computer Vision
+    to build intelligent edge-based systems.
+  </p>
 </section>
 
 <section id="skills">
-    <h2>02. Core Skills</h2>
+  <h2>Technical Skills</h2>
 
-    <div class="skill">
-        <span>C / Embedded C</span>
-        <div class="bar"><div class="fill" style="width:90%"></div></div>
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>C / Embedded C</h3>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
     </div>
 
-    <div class="skill">
-        <span>MSP430 & Microcontrollers</span>
-        <div class="bar"><div class="fill" style="width:85%"></div></div>
+    <div class="card">
+      <h3>MSP430 & Microcontrollers</h3>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
     </div>
 
-    <div class="skill">
-        <span>Interrupts / Timers / GPIO</span>
-        <div class="bar"><div class="fill" style="width:88%"></div></div>
+    <div class="card">
+      <h3>Interrupts / Timers / GPIO</h3>
+      <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
     </div>
 
-    <div class="skill">
-        <span>RTOS Basics</span>
-        <div class="bar"><div class="fill" style="width:65%"></div></div>
+    <div class="card">
+      <h3>RTOS Concepts</h3>
+      <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
     </div>
+
+    <div class="card">
+      <h3>Python (AI/ML)</h3>
+      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+    </div>
+
+    <div class="card">
+      <h3>Computer Vision / CNN</h3>
+      <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+    </div>
+
+  </div>
 </section>
 
 <section id="projects">
-    <h2>03. Embedded Projects</h2>
+  <h2>Projects</h2>
 
-    <div class="project-grid">
+  <div class="card-grid">
 
-        <div class="project-card">
-            <h3>MSP430 Obstacle & Cliff Avoidance Robot</h3>
-            <p>Interrupt-driven autonomous navigation firmware using MSP430.</p>
-            <a href="https://github.com/Anorasharon/msp430-obstacle-cliff-avoidance-robot" target="_blank">View Project →</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Interrupt-Driven Event Processing System</h3>
-            <p>Deterministic firmware architecture using hardware interrupts and state machines.</p>
-            <a href="https://github.com/Anorasharon/interrupt-driven-event-processing-system" target="_blank">View Project →</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Arbitrary Precision Calculator</h3>
-            <p>Large integer arithmetic engine using doubly linked lists in C.</p>
-            <a href="https://github.com/Anorasharon/Arbitrary-Precision-Calculator" target="_blank">View Project →</a>
-        </div>
-
-        <div class="project-card">
-            <h3>LSB Image Steganography</h3>
-            <p>Bit-level BMP file manipulation and data embedding system.</p>
-            <a href="https://github.com/Anorasharon/LSB-steganography" target="_blank">View Project →</a>
-        </div>
-
+    <div class="card">
+      <h3>RotSense – AI Rotten Detection</h3>
+      <p>YOLOv5-based real-time rotten fruit detection system deployed using Raspberry Pi.</p>
     </div>
-</section>
 
-<section id="github">
-    <h2>04. GitHub</h2>
-    <p>Explore additional system-level and AI projects on my GitHub profile.</p>
-    <a href="https://github.com/Anorasharon" target="_blank" class="btn">Open GitHub</a>
+    <div class="card">
+      <h3>BreatheSafe – Edge AI Healthcare</h3>
+      <p>Predictive healthcare system integrating AI models with embedded system logic.</p>
+    </div>
+
+    <div class="card">
+      <h3>MSP430 Obstacle & Cliff Avoidance Robot</h3>
+      <p>Interrupt-driven autonomous robot with IR sensor integration and L298N motor control.</p>
+    </div>
+
+    <div class="card">
+      <h3>Interrupt-Driven Event Processing System</h3>
+      <p>Event-based firmware architecture using modular interrupt handling.</p>
+    </div>
+
+    <div class="card">
+      <h3>Arbitrary Precision Calculator</h3>
+      <p>Large integer arithmetic engine in C using Doubly Linked Lists.</p>
+    </div>
+
+    <div class="card">
+      <h3>LSB Image Steganography</h3>
+      <p>Bit-level data embedding and extraction in BMP images using LSB manipulation.</p>
+    </div>
+
+    <div class="card">
+      <h3>Face Mask Detection</h3>
+      <p>CNN-based real-time face mask detection system using deep learning.</p>
+    </div>
+
+    <div class="card">
+      <h3>Cleaning Up with AI</h3>
+      <p>AI-powered classification system for smart waste segregation.</p>
+    </div>
+
+    <div class="card">
+      <h3>Addressbook Management System</h3>
+      <p>File-handling based contact management system implemented in C.</p>
+    </div>
+
+  </div>
 </section>
 
 <footer>
-    © 2026 Anora Sharon Tessie | Embedded Systems Portfolio
+  © 2026 Anora Sharon Tessie S | Embedded Firmware Engineer
 </footer>
 
 </body>
