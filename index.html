@@ -3,182 +3,205 @@
 <head>
     <title>Anora Sharon Tessie</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0b1220;
+            color: #e6edf3;
         }
-        header {
-            padding: 50px;
-            text-align: center;
-            background: #1e293b;
-        }
-        h1 {
-            margin: 0;
-            font-size: 38px;
-        }
-        section {
-            padding: 40px;
-            max-width: 1000px;
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
             margin: auto;
         }
+
+        .hero {
+            padding: 100px 0 60px 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #9fb3c8;
+        }
+
+        .highlight {
+            color: #4cc9f0;
+        }
+
+        .divider {
+            height: 1px;
+            background: #1f2a44;
+            margin: 60px 0;
+        }
+
         h2 {
-            border-bottom: 2px solid #38bdf8;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            font-size: 28px;
+            margin-bottom: 30px;
         }
-        .project {
-            margin-bottom: 25px;
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111a2e;
             padding: 20px;
-            background: #1e293b;
-            border-radius: 8px;
-            transition: 0.3s;
+            border-radius: 10px;
+            transition: 0.3s ease;
         }
-        .project:hover {
+
+        .card:hover {
             transform: translateY(-5px);
         }
-        a {
-            color: #38bdf8;
-            text-decoration: none;
+
+        .project {
+            margin-bottom: 40px;
         }
+
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+        .project a {
+            color: #4cc9f0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
         footer {
             text-align: center;
-            padding: 20px;
-            background: #1e293b;
-            font-size: 14px;
+            padding: 40px 0;
+            color: #6b7a99;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Anora Sharon Tessie S</h1>
-    <p>Embedded Firmware Engineer | Interrupt-Driven Systems | Hardware–Software Integration</p>
-    <p>
+<div class="container">
+
+    <section class="hero">
+        <h1>Anora Sharon Tessie S</h1>
+        <p>
+            <span class="highlight">Embedded Firmware Engineer</span>  
+            specializing in interrupt-driven architecture,
+            hardware–software integration, and low-level system design.
+        </p>
+        <br>
         <a href="https://github.com/Anorasharon" target="_blank">GitHub</a>
-    </p>
-</header>
+    </section>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        Embedded Firmware Engineer focused on low-level system design,
-        interrupt-driven architecture, efficient memory handling, and 
-        modular embedded software development.
-    </p>
-</section>
+    <div class="divider"></div>
 
-<section>
-    <h2>Core Embedded Skills</h2>
-    <p><strong>Programming:</strong> C, Embedded C</p>
-    <p><strong>Microcontrollers:</strong> MSP430</p>
-    <p><strong>Concepts:</strong> Interrupt Handling, Timers, GPIO, State Machines</p>
-    <p><strong>Hardware Integration:</strong> L298N Motor Driver, IR Sensors</p>
-    <p><strong>System Design:</strong> Modular Architecture, Event-Driven Firmware</p>
-</section>
+    <section>
+        <h2>Core Embedded Expertise</h2>
 
-<section>
-    <h2>Embedded & System-Level Projects</h2>
+        <div class="skills-grid">
+            <div class="card">
+                <strong>Programming</strong><br>
+                C, Embedded C
+            </div>
 
-    <div class="project">
-        <h3>MSP430 Obstacle & Cliff Avoidance Robot</h3>
-        <p>
-            Designed autonomous navigation firmware using MSP430.
-            Implemented interrupt-driven sensor handling and motor control
-            via L298N driver with real-time decision logic.
-        </p>
-        <a href="https://github.com/Anorasharon/msp430-obstacle-cliff-avoidance-robot" target="_blank">View on GitHub</a>
-    </div>
+            <div class="card">
+                <strong>Microcontrollers</strong><br>
+                MSP430
+            </div>
 
-    <div class="project">
-        <h3>Interrupt-Driven Event Processing System</h3>
-        <p>
-            Built modular embedded firmware architecture using hardware interrupts
-            and state-machine based event handling for deterministic system behavior.
-        </p>
-        <a href="https://github.com/Anorasharon/interrupt-driven-event-processing-system" target="_blank">View on GitHub</a>
-    </div>
+            <div class="card">
+                <strong>System Concepts</strong><br>
+                Interrupts, Timers, GPIO, State Machines
+            </div>
 
-    <div class="project">
-        <h3>Arbitrary Precision Calculator (C)</h3>
-        <p>
-            Implemented large-integer arithmetic using Doubly Linked Lists.
-            Focused on memory management, carry/borrow handling, and modular C design.
-        </p>
-        <a href="https://github.com/Anorasharon/Arbitrary-Precision-Calculator" target="_blank">View on GitHub</a>
-    </div>
+            <div class="card">
+                <strong>Hardware Integration</strong><br>
+                L298N, IR Sensors
+            </div>
+        </div>
+    </section>
 
-    <div class="project">
-        <h3>LSB Image Steganography</h3>
-        <p>
-            Developed bit-level data embedding and extraction system in BMP images
-            using LSB manipulation and file handling in C.
-        </p>
-        <a href="https://github.com/Anorasharon/LSB-steganography" target="_blank">View on GitHub</a>
-    </div>
+    <div class="divider"></div>
 
-    <div class="project">
-        <h3>Address Book Management System</h3>
-        <p>
-            Console-based contact management system implemented in C
-            demonstrating file handling and structured data organization.
-        </p>
-        <a href="https://github.com/Anorasharon/Addressbook-management-system" target="_blank">View on GitHub</a>
-    </div>
+    <section>
+        <h2>Embedded & System-Level Projects</h2>
 
-</section>
+        <div class="project">
+            <h3>MSP430 Obstacle & Cliff Avoidance Robot</h3>
+            <p>
+                Autonomous navigation firmware built on MSP430 using
+                interrupt-based sensor processing and motor control logic.
+            </p>
+            <a href="https://github.com/Anorasharon/msp430-obstacle-cliff-avoidance-robot" target="_blank">View Project →</a>
+        </div>
 
-<section>
-    <h2>AI & Edge Intelligence Projects</h2>
+        <div class="project">
+            <h3>Interrupt-Driven Event Processing System</h3>
+            <p>
+                Modular firmware architecture using hardware interrupts
+                and deterministic state-based event handling.
+            </p>
+            <a href="https://github.com/Anorasharon/interrupt-driven-event-processing-system" target="_blank">View Project →</a>
+        </div>
 
-    <div class="project">
-        <h3>RotSense – Rotten Fruit Detection System</h3>
-        <p>
-            Computer vision system for detecting rotten fruits using trained models,
-            designed for real-time deployment concepts.
-        </p>
-        <a href="https://github.com/Anorasharon/Rot-sense" target="_blank">View on GitHub</a>
-    </div>
+        <div class="project">
+            <h3>Arbitrary Precision Calculator</h3>
+            <p>
+                Large integer arithmetic engine in C using Doubly Linked Lists
+                with manual memory management.
+            </p>
+            <a href="https://github.com/Anorasharon/Arbitrary-Precision-Calculator" target="_blank">View Project →</a>
+        </div>
 
-    <div class="project">
-        <h3>BreatheSafe – Predictive Healthcare with Edge AI</h3>
-        <p>
-            AI-assisted healthcare prediction system integrating model logic
-            with system-level design principles.
-        </p>
-        <a href="https://github.com/Anorasharon/BreatheSafe-Predictive-Healthcare-with-Edge-AI" target="_blank">View on GitHub</a>
-    </div>
+        <div class="project">
+            <h3>LSB Image Steganography</h3>
+            <p>
+                Bit-level data embedding and extraction in BMP images
+                using direct binary manipulation.
+            </p>
+            <a href="https://github.com/Anorasharon/LSB-steganography" target="_blank">View Project →</a>
+        </div>
 
-    <div class="project">
-        <h3>Cleaning Up with AI</h3>
-        <p>
-            Machine learning-based waste classification system exploring
-            data preprocessing and model optimization.
-        </p>
-        <a href="https://github.com/Anorasharon/Cleaning-Up-with-AI" target="_blank">View on GitHub</a>
-    </div>
+    </section>
 
-    <div class="project">
-        <h3>Face Mask Detection using Deep Learning</h3>
-        <p>
-            CNN-based computer vision model for real-time mask detection.
-        </p>
-        <a href="https://github.com/Anorasharon/-Face-Mask-Detection-Using-Deep-Learning" target="_blank">View on GitHub</a>
-    </div>
+    <div class="divider"></div>
 
-</section>
-</section>
+    <section>
+        <h2>AI & Edge Projects</h2>
 
-<section>
-    <h2>AI & Computer Vision (Secondary Focus)</h2>
-    <p>Exploring intelligent edge systems with lightweight CNN models and real-time image classification.</p>
-</section>
+        <div class="project">
+            <h3>RotSense</h3>
+            <a href="https://github.com/Anorasharon/Rot-sense" target="_blank">View Project →</a>
+        </div>
 
-<footer>
-    © 2026 Anora Sharon Tessie | Embedded Systems Portfolio
-</footer>
+        <div class="project">
+            <h3>BreatheSafe</h3>
+            <a href="https://github.com/Anorasharon/BreatheSafe-Predictive-Healthcare-with-Edge-AI" target="_blank">View Project →</a>
+        </div>
+
+        <div class="project">
+            <h3>Cleaning Up with AI</h3>
+            <a href="https://github.com/Anorasharon/Cleaning-Up-with-AI" target="_blank">View Project →</a>
+        </div>
+
+        <div class="project">
+            <h3>Face Mask Detection</h3>
+            <a href="https://github.com/Anorasharon/-Face-Mask-Detection-Using-Deep-Learning" target="_blank">View Project →</a>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Anora Sharon Tessie | Embedded Systems Portfolio
+    </footer>
+
+</div>
 
 </body>
 </html>
