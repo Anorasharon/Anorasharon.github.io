@@ -5,127 +5,183 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anora Sharon Tessie S | Embedded Firmware Engineer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 :root{
-  --bg:#0b1220;
-  --card:#111a2f;
-  --accent:#00d4ff;
-  --text:#e6f1ff;
-  --dim:#8aa0c6;
+--bg:#061021;
+--card:#0d1b2e;
+--accent:#00d4ff;
+--text:#eaf6ff;
+--dim:#8aa0c6;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Segoe UI, sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
 body{
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+background:var(--bg);
+color:var(--text);
+scroll-behavior:smooth;
 }
 
-section{
-  padding:70px 20px;
-  max-width:1100px;
-  margin:auto;
-}
-
-h2{
-  margin-bottom:30px;
-  color:var(--accent);
-  font-size:26px;
-}
-
-p{
-  margin-bottom:14px;
-  color:var(--dim);
-}
-
+/* NAV */
 nav{
-  position:fixed;
-  width:100%;
-  background:#0b1220;
-  padding:15px 40px;
-  display:flex;
-  justify-content:space-between;
-  border-bottom:1px solid #1e2a45;
-  z-index:1000;
+position:fixed;
+width:100%;
+top:0;
+background:rgba(6,16,33,0.9);
+padding:18px 60px;
+display:flex;
+justify-content:space-between;
+border-bottom:1px solid #112240;
+z-index:1000;
 }
 
 nav a{
-  color:var(--accent);
-  text-decoration:none;
-  margin-left:25px;
-  font-size:14px;
+color:var(--accent);
+text-decoration:none;
+margin-left:30px;
+font-size:14px;
 }
 
-.hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding-top:80px;
+/* HERO */
+#hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:120px 80px;
 }
 
-.hero h1{
-  font-size:42px;
+.hero-title{
+font-family:'Orbitron',sans-serif;
+font-size:60px;
+font-weight:800;
 }
 
-.hero span{
-  color:var(--accent);
+.hero-title span{
+color:var(--accent);
+text-shadow:0 0 20px rgba(0,212,255,0.7);
+}
+
+.hero-role{
+color:var(--accent);
+margin:20px 0;
+font-size:22px;
+min-height:28px;
+}
+
+.hero-desc{
+max-width:550px;
+color:var(--dim);
+margin-bottom:30px;
+line-height:1.6;
 }
 
 .btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:12px 22px;
-  background:var(--accent);
-  color:#000;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:5px;
+padding:12px 26px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+margin-right:15px;
+transition:0.3s;
 }
 
-.card-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
+.btn-primary{
+background:var(--accent);
+color:#000;
 }
 
-.card{
-  background:var(--card);
-  padding:20px;
-  border-radius:8px;
-  border:1px solid #1e2a45;
-  transition:0.3s;
+.btn-primary:hover{
+box-shadow:0 0 25px var(--accent);
 }
 
-.card:hover{
-  border-color:var(--accent);
-  transform:translateY(-5px);
+.btn-outline{
+border:1px solid var(--accent);
+color:var(--accent);
+}
+
+.btn-outline:hover{
+background:rgba(0,212,255,0.1);
+}
+
+/* SECTIONS */
+section{
+padding:80px 80px;
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+color:var(--accent);
+margin-bottom:40px;
+font-family:'Orbitron';
+}
+
+/* SKILLS */
+.skill{
+margin-bottom:25px;
+}
+
+.skill-name{
+margin-bottom:6px;
 }
 
 .skill-bar{
-  background:#1e2a45;
-  height:6px;
-  border-radius:5px;
-  margin-top:6px;
-  overflow:hidden;
+height:6px;
+background:#12233f;
+border-radius:6px;
+overflow:hidden;
 }
 
 .skill-fill{
-  background:var(--accent);
-  height:100%;
+height:100%;
+background:var(--accent);
+width:0;
+transition:width 1.5s ease;
 }
 
+/* PROJECTS */
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:var(--card);
+padding:22px;
+border-radius:10px;
+border:1px solid #112240;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-6px);
+border-color:var(--accent);
+box-shadow:0 0 20px rgba(0,212,255,0.2);
+}
+
+.project-card h3{
+margin-bottom:10px;
+color:#fff;
+}
+
+.project-card p{
+color:var(--dim);
+font-size:14px;
+}
+
+/* FOOTER */
 footer{
-  text-align:center;
-  padding:30px;
-  border-top:1px solid #1e2a45;
-  color:var(--dim);
+text-align:center;
+padding:40px;
+border-top:1px solid #112240;
+color:var(--dim);
+}
+
+.github-link{
+color:var(--accent);
+text-decoration:none;
 }
 </style>
 </head>
@@ -133,130 +189,175 @@ footer{
 <body>
 
 <nav>
-  <div><strong>ANORA</strong></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-  </div>
+<div><strong style="font-family:Orbitron;color:var(--accent)">ANORA</strong></div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#github">GitHub</a>
+</div>
 </nav>
 
-<section class="hero">
-  <h1>Hi, I'm <span>Anora</span></h1>
-  <p>Embedded Firmware Engineer | Hardware–Software Integration | Edge AI Enthusiast</p>
-  <a href="#projects" class="btn">View Projects</a>
+<section id="hero">
+<div>
+<h1 class="hero-title">Hi, I'm <br><span>Anora</span></h1>
+<div class="hero-role"><span id="typing"></span></div>
+<p class="hero-desc">
+Embedded Firmware Engineer specializing in interrupt-driven systems,
+low-level C programming, and hardware–software integration.
+Building intelligent embedded and Edge AI solutions.
+</p>
+<a href="#projects" class="btn btn-primary">View Projects</a>
+<a href="https://github.com/Anorasharon" target="_blank" class="btn btn-outline">GitHub Profile</a>
+</div>
 </section>
 
 <section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am an Embedded Firmware Engineer specializing in low-level system design,
-    interrupt-driven architecture, and modular firmware development.
-  </p>
-  <p>
-    I work primarily with C / Embedded C and microcontroller-based systems,
-    focusing on efficient memory usage, real-time execution, and hardware integration.
-  </p>
-  <p>
-    Alongside firmware development, I explore AI and Computer Vision
-    to build intelligent edge-based systems.
-  </p>
+<h2>About Me</h2>
+<p>
+I focus on modular firmware architecture, efficient memory management,
+and real-time embedded system design.
+</p>
+<p>
+Alongside embedded development, I build AI-powered computer vision systems
+for edge devices including Raspberry Pi and ESP platforms.
+</p>
 </section>
 
 <section id="skills">
-  <h2>Technical Skills</h2>
+<h2>Technical Skills</h2>
 
-  <div class="card-grid">
+<div class="skill">
+<div class="skill-name">C / Embedded C</div>
+<div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+</div>
 
-    <div class="card">
-      <h3>C / Embedded C</h3>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-    </div>
+<div class="skill">
+<div class="skill-name">MSP430 & Microcontrollers</div>
+<div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+</div>
 
-    <div class="card">
-      <h3>MSP430 & Microcontrollers</h3>
-      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-    </div>
+<div class="skill">
+<div class="skill-name">Interrupts / Timers / GPIO</div>
+<div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+</div>
 
-    <div class="card">
-      <h3>Interrupts / Timers / GPIO</h3>
-      <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
-    </div>
+<div class="skill">
+<div class="skill-name">RTOS Concepts</div>
+<div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+</div>
 
-    <div class="card">
-      <h3>RTOS Concepts</h3>
-      <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
-    </div>
+<div class="skill">
+<div class="skill-name">Python (AI/ML)</div>
+<div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+</div>
 
-    <div class="card">
-      <h3>Python (AI/ML)</h3>
-      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-    </div>
-
-    <div class="card">
-      <h3>Computer Vision / CNN</h3>
-      <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
-    </div>
-
-  </div>
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
+<h2>Projects</h2>
 
-  <div class="card-grid">
+<div class="project-grid">
 
-    <div class="card">
-      <h3>RotSense – AI Rotten Detection</h3>
-      <p>YOLOv5-based real-time rotten fruit detection system deployed using Raspberry Pi.</p>
-    </div>
+<div class="project-card">
+<h3>RotSense – AI Rotten Detection</h3>
+<p>YOLOv5-based real-time rotten fruit detection deployed on Raspberry Pi.</p>
+</div>
 
-    <div class="card">
-      <h3>BreatheSafe – Edge AI Healthcare</h3>
-      <p>Predictive healthcare system integrating AI models with embedded system logic.</p>
-    </div>
+<div class="project-card">
+<h3>BreatheSafe – Predictive Healthcare</h3>
+<p>Edge AI healthcare monitoring system integrating ML models with embedded logic.</p>
+</div>
 
-    <div class="card">
-      <h3>MSP430 Obstacle & Cliff Avoidance Robot</h3>
-      <p>Interrupt-driven autonomous robot with IR sensor integration and L298N motor control.</p>
-    </div>
+<div class="project-card">
+<h3>MSP430 Obstacle & Cliff Robot</h3>
+<p>Interrupt-driven autonomous robot with IR sensors and L298N motor driver.</p>
+</div>
 
-    <div class="card">
-      <h3>Interrupt-Driven Event Processing System</h3>
-      <p>Event-based firmware architecture using modular interrupt handling.</p>
-    </div>
+<div class="project-card">
+<h3>Interrupt-Driven Event System</h3>
+<p>Firmware architecture using modular interrupt-based state logic.</p>
+</div>
 
-    <div class="card">
-      <h3>Arbitrary Precision Calculator</h3>
-      <p>Large integer arithmetic engine in C using Doubly Linked Lists.</p>
-    </div>
+<div class="project-card">
+<h3>Arbitrary Precision Calculator</h3>
+<p>Large-integer arithmetic engine in C using doubly linked lists.</p>
+</div>
 
-    <div class="card">
-      <h3>LSB Image Steganography</h3>
-      <p>Bit-level data embedding and extraction in BMP images using LSB manipulation.</p>
-    </div>
+<div class="project-card">
+<h3>LSB Image Steganography</h3>
+<p>Bit-level data embedding and extraction in BMP images using LSB manipulation.</p>
+</div>
 
-    <div class="card">
-      <h3>Face Mask Detection</h3>
-      <p>CNN-based real-time face mask detection system using deep learning.</p>
-    </div>
+<div class="project-card">
+<h3>Face Mask Detection</h3>
+<p>CNN-based real-time mask detection using deep learning.</p>
+</div>
 
-    <div class="card">
-      <h3>Cleaning Up with AI</h3>
-      <p>AI-powered classification system for smart waste segregation.</p>
-    </div>
+<div class="project-card">
+<h3>Cleaning Up with AI</h3>
+<p>AI-based smart waste classification system.</p>
+</div>
 
-    <div class="card">
-      <h3>Addressbook Management System</h3>
-      <p>File-handling based contact management system implemented in C.</p>
-    </div>
+<div class="project-card">
+<h3>Addressbook Management System</h3>
+<p>File-handling based contact management system implemented in C.</p>
+</div>
 
-  </div>
+</div>
+</section>
+
+<section id="github">
+<h2>GitHub</h2>
+<p>
+View all repositories and contributions on my GitHub profile:
+<br><br>
+<a href="https://github.com/Anorasharon" target="_blank" class="github-link">
+github.com/Anorasharon
+</a>
+</p>
 </section>
 
 <footer>
-  © 2026 Anora Sharon Tessie S | Embedded Firmware Engineer
+© 2026 Anora Sharon Tessie S | Embedded Firmware Engineer
 </footer>
+
+<script>
+const roles = [
+"Embedded Firmware Engineer",
+"Hardware–Software Integration",
+"Edge AI Enthusiast"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let currentText = "";
+let isDeleting = false;
+
+function typeEffect() {
+const typingElement = document.getElementById("typing");
+const fullText = roles[roleIndex];
+
+if (isDeleting) {
+currentText = fullText.substring(0, charIndex--);
+} else {
+currentText = fullText.substring(0, charIndex++);
+}
+
+typingElement.textContent = currentText;
+
+if (!isDeleting && charIndex === fullText.length) {
+setTimeout(() => isDeleting = true, 1000);
+} else if (isDeleting && charIndex === 0) {
+isDeleting = false;
+roleIndex = (roleIndex + 1) % roles.length;
+}
+
+setTimeout(typeEffect, isDeleting ? 40 : 70);
+}
+
+typeEffect();
+</script>
 
 </body>
 </html>
