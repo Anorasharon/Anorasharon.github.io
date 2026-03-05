@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anora Sharon Tessie S | Embedded Firmware Engineer</title>
+<title>Anora Sharon Tessie | Embedded Firmware Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
 --bg:#061021;
 --card:#0d1b2e;
@@ -30,6 +31,7 @@ scroll-behavior:smooth;
 }
 
 /* NAV */
+
 nav{
 position:fixed;
 top:0;
@@ -49,7 +51,8 @@ margin-left:30px;
 font-size:14px;
 }
 
-/* SECTION BASE */
+/* SECTIONS */
+
 section{
 padding:120px 60px;
 max-width:1100px;
@@ -70,6 +73,7 @@ margin-bottom:40px;
 }
 
 /* HERO */
+
 #hero{
 min-height:100vh;
 display:flex;
@@ -115,6 +119,7 @@ color:var(--accent);
 }
 
 /* ABOUT */
+
 #about p{
 max-width:800px;
 line-height:1.9;
@@ -122,12 +127,15 @@ color:var(--dim);
 margin-bottom:20px;
 }
 
-/* CARDS */
+/* GRID */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
+
+/* CARD */
 
 .card{
 background:var(--card);
@@ -154,7 +162,8 @@ color:var(--accent);
 text-decoration:none;
 }
 
-/* GITHUB SECTION */
+/* GITHUB */
+
 .stats{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -176,36 +185,7 @@ color:var(--accent);
 font-size:28px;
 }
 
-.github-flex{
-display:flex;
-flex-wrap:wrap;
-gap:40px;
-}
-
-.languages{
-flex:1;
-min-width:300px;
-}
-
-.lang{
-margin-bottom:20px;
-}
-
-.lang-bar{
-height:6px;
-background:#12233f;
-border-radius:6px;
-overflow:hidden;
-}
-
-.lang-bar div{
-height:100%;
-background:var(--accent);
-}
-
 .profile-card{
-flex:1;
-min-width:300px;
 background:var(--card);
 padding:30px;
 border-radius:10px;
@@ -214,12 +194,14 @@ text-align:center;
 }
 
 /* FOOTER */
+
 footer{
 text-align:center;
 padding:40px;
 border-top:1px solid #112240;
 color:var(--dim);
 }
+
 </style>
 </head>
 
@@ -227,6 +209,7 @@ color:var(--dim);
 
 <nav>
 <div style="font-family:Orbitron;color:var(--accent)">ANORA</div>
+
 <div>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
@@ -236,127 +219,292 @@ color:var(--dim);
 </div>
 </nav>
 
+
 <section id="hero">
+
 <div>
-<h1 class="hero-title">Hi, I'm <br><span>Anora Sharon Tessie S</span></h1>
+
+<h1 class="hero-title">
+Hi, I'm <br>
+<span>Anora Sharon Tessie</span>
+</h1>
+
 <p class="hero-desc">
-Embedded Firmware Engineer building hardware-integrated intelligent systems.
-Specialized in interrupt-driven architectures, RTOS scheduling,
-TinyML deployment, and real-time embedded system design.
+
+Embedded Firmware Engineer specializing in real-time embedded systems, interrupt-driven firmware architecture, and hardware-software co-design.  
+Focused on building reliable embedded devices using MSP430, ESP32, and ARM platforms with strong foundations in Embedded C and system-level debugging.
+
 </p>
+
 <a href="#projects" class="btn btn-primary">View Projects</a>
-<a href="https://github.com/Anorasharon" target="_blank" class="btn btn-outline">GitHub Profile</a>
+
+<a href="https://github.com/Anorasharon" target="_blank" class="btn btn-outline">
+GitHub Profile
+</a>
+
 </div>
+
 </section>
+
 
 <section id="about">
+
 <h2>About Me</h2>
+
 <p>
-I am an Embedded Firmware Engineer focused on interrupt-driven firmware architecture,
-RTOS-based systems, and hardware–software integration using MSP430, ESP32, and ARM platforms.
+
+I am an **Embedded Firmware Engineer** passionate about designing reliable hardware-software integrated systems.  
+My primary focus is on **interrupt-driven architectures, low-level firmware development, real-time system behavior, and embedded device optimization.**
+
 </p>
+
 <p>
-I also explore Edge AI and TinyML deployment for intelligent embedded applications.
+
+Around **80% of my work is focused on embedded systems** including microcontroller programming, driver-level firmware, and system-level debugging.  
+The remaining **20% explores AI/ML for edge devices**, where I experiment with TinyML and lightweight models deployed on embedded platforms.
+
 </p>
+
 </section>
+
 
 <section id="skills">
+
 <h2>Technical Skills</h2>
+
 <div class="grid">
+
 <div class="card">
 <h3>Embedded Systems</h3>
-<p>C / Embedded C</p>
-<p>MSP430 / ESP32</p>
+<p>Embedded C</p>
+<p>MSP430</p>
+<p>ESP32</p>
 <p>Interrupt Handling</p>
-<p>FreeRTOS</p>
+<p>FreeRTOS Basics</p>
 </div>
+
 <div class="card">
 <h3>Programming</h3>
-<p>C</p>
+<p>C Programming</p>
 <p>Python</p>
 <p>Data Structures</p>
-<p>Bit Manipulation</p>
+<p>Pointer Manipulation</p>
+<p>Bitwise Operations</p>
 </div>
+
 <div class="card">
-<h3>AI & Edge</h3>
-<p>CNN Development</p>
+<h3>Edge AI</h3>
 <p>Image Classification</p>
-<p>TinyML</p>
-<p>Edge Deployment</p>
+<p>CNN Models</p>
+<p>TinyML Deployment</p>
+<p>Edge Device Inference</p>
 </div>
+
 </div>
+
 </section>
+
 
 <section id="projects">
+
 <h2>Projects</h2>
+
 <div class="grid">
+
+
 <div class="card">
+<h3>Address Book Management System</h3>
+
+<p>
+Menu-driven Contact Management CLI application built in C with modular architecture and CSV file persistence.
+</p>
+
+<p>
+Implements structures, file handling, and modular C design using Makefile based builds.
+</p>
+
+<a href="https://github.com/Anorasharon/Addressbook-management-system" target="_blank">
+View on GitHub →
+</a>
+
+</div>
+
+
+
+<div class="card">
+
 <h3>LSB Image Steganography</h3>
-<p>Bit-level embedding & extraction in BMP images.</p>
+
+<p>
+
+A C based implementation of Least Significant Bit steganography for hiding secret text messages inside BMP images.
+
+</p>
+
+<p>
+
+Uses bit-level manipulation and binary file processing to embed and extract hidden information securely.
+
+</p>
+
+<a href="https://github.com/Anorasharon/LSB-steganography" target="_blank">
+View on GitHub →
+</a>
+
 </div>
+
+
+
 <div class="card">
-<h3>Cleaning Up with AI</h3>
-<p>AI-powered waste classification system.</p>
+
+<h3>Arbitrary Precision Calculator</h3>
+
+<p>
+
+A modular calculator capable of performing arithmetic on extremely large integers using Doubly Linked Lists.
+
+</p>
+
+<p>
+
+Demonstrates dynamic memory allocation, pointer manipulation, and custom arithmetic algorithms in C.
+
+</p>
+
+<a href="https://github.com/Anorasharon/Arbitrary-Precision-Calculator" target="_blank">
+View on GitHub →
+</a>
+
 </div>
+
+
+
 <div class="card">
+
 <h3>MSP430 Robot</h3>
-<p>Obstacle & cliff detection robot using IR sensors.</p>
+
+<p>
+
+Autonomous obstacle and cliff detection robot using IR sensors and MSP430 microcontroller.
+
+</p>
+
+<p>
+
+Implements sensor based decision logic and embedded firmware control for robotic navigation.
+
+</p>
+
 </div>
+
+
+
 <div class="card">
+
 <h3>BreatheSafe</h3>
-<p>ESP32 + MAX30102 health monitoring system.</p>
+
+<p>
+
+ESP32 based health monitoring system using MAX30102 sensor for heart rate tracking.
+
+</p>
+
+<p>
+
+Designed for real-time monitoring with microcontroller firmware and embedded signal processing.
+
+</p>
+
 </div>
+
+
 </div>
+
 </section>
 
+
+
 <section id="github">
+
 <h2>GitHub Activity</h2>
 
 <div class="stats">
-<div class="stat-box"><h3>15+</h3><p>Repositories</p></div>
-<div class="stat-box"><h3>5+</h3><p>Major Projects</p></div>
-<div class="stat-box"><h3>Edge AI</h3><p>Research</p></div>
-<div class="stat-box"><h3>Embedded</h3><p>Firmware</p></div>
+
+<div class="stat-box">
+<h3>25+</h3>
+<p>Repositories</p>
 </div>
 
-<div class="github-flex">
-<div class="languages">
-<h3>Languages Used</h3>
-<div class="lang"><p>C</p><div class="lang-bar"><div style="width:80%"></div></div></div>
-<div class="lang"><p>Python</p><div class="lang-bar"><div style="width:65%"></div></div></div>
-<div class="lang"><p>Embedded C</p><div class="lang-bar"><div style="width:85%"></div></div></div>
+<div class="stat-box">
+<h3>Embedded</h3>
+<p>Firmware Projects</p>
 </div>
+
+<div class="stat-box">
+<h3>C</h3>
+<p>Primary Language</p>
+</div>
+
+<div class="stat-box">
+<h3>Edge AI</h3>
+<p>Research Interest</p>
+</div>
+
+</div>
+
 
 <div class="profile-card">
+
 <p>github.com/Anorasharon</p>
+
 <a href="https://github.com/Anorasharon" target="_blank" class="btn btn-primary">
 Open GitHub Profile
 </a>
+
 </div>
-</div>
+
 </section>
+
+
 
 <section id="contact">
+
 <h2>Contact</h2>
+
 <p>Email: anorasharontessie@gmail.com</p>
 <p>Chennai, Tamil Nadu</p>
+
 </section>
 
+
 <footer>
-© 2026 Anora Sharon Tessie S
+
+© 2026 Anora Sharon Tessie
+
 </footer>
 
-<script>
-const sections = document.querySelectorAll("section");
 
-window.addEventListener("scroll", () => {
-sections.forEach(sec => {
-if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+
+<script>
+
+const sections=document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(sec=>{
+
+if(sec.getBoundingClientRect().top < window.innerHeight-100){
+
 sec.classList.add("show");
+
 }
+
 });
+
 });
+
 </script>
+
 
 </body>
 </html>
