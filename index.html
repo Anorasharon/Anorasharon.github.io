@@ -1,8 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Anora Sharon Tessie | Embedded Firmware Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -51,20 +53,12 @@ margin-left:30px;
 font-size:14px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
 padding:120px 60px;
 max-width:1100px;
 margin:auto;
-opacity:0;
-transform:translateY(80px);
-transition:all 0.8s ease;
-}
-
-section.show{
-opacity:1;
-transform:translateY(0);
 }
 
 h2{
@@ -78,18 +72,33 @@ margin-bottom:40px;
 min-height:100vh;
 display:flex;
 align-items:center;
-opacity:1;
-transform:none;
 }
 
 .hero-title{
 font-size:55px;
 font-family:'Orbitron';
+animation: glowName 3s ease-in-out infinite alternate;
 }
 
 .hero-title span{
 color:var(--accent);
-text-shadow:0 0 25px var(--accent);
+}
+
+/* NAME ANIMATION */
+
+@keyframes glowName{
+
+0%{
+text-shadow:0 0 5px var(--accent);
+}
+
+100%{
+text-shadow:
+0 0 10px var(--accent),
+0 0 20px var(--accent),
+0 0 40px var(--accent);
+}
+
 }
 
 .hero-desc{
@@ -118,15 +127,6 @@ border:1px solid var(--accent);
 color:var(--accent);
 }
 
-/* ABOUT */
-
-#about p{
-max-width:800px;
-line-height:1.9;
-color:var(--dim);
-margin-bottom:20px;
-}
-
 /* GRID */
 
 .grid{
@@ -138,17 +138,27 @@ gap:25px;
 /* CARD */
 
 .card{
+
 background:var(--card);
 padding:25px;
 border-radius:10px;
 border:1px solid #112240;
-transition:0.3s;
+
+opacity:0;
+transform:translateY(60px);
+
+transition:all 0.6s ease;
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px) scale(1.02);
 border-color:var(--accent);
-box-shadow:0 0 25px rgba(0,212,255,0.3);
+box-shadow:0 0 25px rgba(0,212,255,0.4);
 }
 
 .card p{
@@ -177,6 +187,15 @@ padding:30px;
 border-radius:10px;
 text-align:center;
 border:1px solid #112240;
+
+opacity:0;
+transform:translateY(60px);
+transition:0.6s;
+}
+
+.stat-box.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .stat-box h3{
@@ -208,6 +227,7 @@ color:var(--dim);
 <body>
 
 <nav>
+
 <div style="font-family:Orbitron;color:var(--accent)">ANORA</div>
 
 <div>
@@ -217,6 +237,7 @@ color:var(--dim);
 <a href="#github">GitHub</a>
 <a href="#contact">Contact</a>
 </div>
+
 </nav>
 
 
@@ -231,8 +252,9 @@ Hi, I'm <br>
 
 <p class="hero-desc">
 
-Embedded Firmware Engineer specializing in real-time embedded systems, interrupt-driven firmware architecture, and hardware-software co-design.  
-Focused on building reliable embedded devices using MSP430, ESP32, and ARM platforms with strong foundations in Embedded C and system-level debugging.
+Embedded Firmware Engineer specializing in real-time embedded systems, interrupt-driven firmware architecture, and hardware-software integration.
+
+80% of my work focuses on embedded systems and firmware design, while 20% explores AI/ML for intelligent edge devices.
 
 </p>
 
@@ -247,25 +269,25 @@ GitHub Profile
 </section>
 
 
+
 <section id="about">
 
 <h2>About Me</h2>
 
 <p>
 
-I am an **Embedded Firmware Engineer** passionate about designing reliable hardware-software integrated systems.  
-My primary focus is on **interrupt-driven architectures, low-level firmware development, real-time system behavior, and embedded device optimization.**
+I build hardware-integrated systems focusing on microcontrollers, low-level firmware, interrupt handling, and embedded device optimization.
 
 </p>
 
 <p>
 
-Around **80% of my work is focused on embedded systems** including microcontroller programming, driver-level firmware, and system-level debugging.  
-The remaining **20% explores AI/ML for edge devices**, where I experiment with TinyML and lightweight models deployed on embedded platforms.
+My work primarily revolves around firmware architecture and embedded systems engineering while exploring TinyML and Edge AI deployment for intelligent devices.
 
 </p>
 
 </section>
+
 
 
 <section id="skills">
@@ -275,34 +297,56 @@ The remaining **20% explores AI/ML for edge devices**, where I experiment with T
 <div class="grid">
 
 <div class="card">
+
 <h3>Embedded Systems</h3>
+
 <p>Embedded C</p>
 <p>MSP430</p>
 <p>ESP32</p>
 <p>Interrupt Handling</p>
-<p>FreeRTOS Basics</p>
+
 </div>
 
+
 <div class="card">
+
+<h3>Firmware Expertise</h3>
+
+<p>Interrupt Driven Architecture</p>
+<p>Low Level Debugging</p>
+<p>Driver Level Programming</p>
+<p>Memory Handling</p>
+
+</div>
+
+
+<div class="card">
+
 <h3>Programming</h3>
+
 <p>C Programming</p>
 <p>Python</p>
 <p>Data Structures</p>
-<p>Pointer Manipulation</p>
 <p>Bitwise Operations</p>
+
 </div>
 
+
 <div class="card">
+
 <h3>Edge AI</h3>
+
 <p>Image Classification</p>
 <p>CNN Models</p>
-<p>TinyML Deployment</p>
-<p>Edge Device Inference</p>
+<p>TinyML</p>
+<p>Edge Deployment</p>
+
 </div>
 
 </div>
 
 </section>
+
 
 
 <section id="projects">
@@ -311,16 +355,12 @@ The remaining **20% explores AI/ML for edge devices**, where I experiment with T
 
 <div class="grid">
 
-
 <div class="card">
+
 <h3>Address Book Management System</h3>
 
 <p>
-Menu-driven Contact Management CLI application built in C with modular architecture and CSV file persistence.
-</p>
-
-<p>
-Implements structures, file handling, and modular C design using Makefile based builds.
+CLI contact manager written in C with modular architecture and CSV file persistence.
 </p>
 
 <a href="https://github.com/Anorasharon/Addressbook-management-system" target="_blank">
@@ -330,21 +370,12 @@ View on GitHub →
 </div>
 
 
-
 <div class="card">
 
 <h3>LSB Image Steganography</h3>
 
 <p>
-
-A C based implementation of Least Significant Bit steganography for hiding secret text messages inside BMP images.
-
-</p>
-
-<p>
-
-Uses bit-level manipulation and binary file processing to embed and extract hidden information securely.
-
+Hide and extract secret messages inside BMP images using LSB bit manipulation.
 </p>
 
 <a href="https://github.com/Anorasharon/LSB-steganography" target="_blank">
@@ -354,21 +385,12 @@ View on GitHub →
 </div>
 
 
-
 <div class="card">
 
 <h3>Arbitrary Precision Calculator</h3>
 
 <p>
-
-A modular calculator capable of performing arithmetic on extremely large integers using Doubly Linked Lists.
-
-</p>
-
-<p>
-
-Demonstrates dynamic memory allocation, pointer manipulation, and custom arithmetic algorithms in C.
-
+Perform arithmetic on extremely large integers using Doubly Linked Lists.
 </p>
 
 <a href="https://github.com/Anorasharon/Arbitrary-Precision-Calculator" target="_blank">
@@ -378,25 +400,15 @@ View on GitHub →
 </div>
 
 
-
 <div class="card">
 
 <h3>MSP430 Robot</h3>
 
 <p>
-
-Autonomous obstacle and cliff detection robot using IR sensors and MSP430 microcontroller.
-
-</p>
-
-<p>
-
-Implements sensor based decision logic and embedded firmware control for robotic navigation.
-
+Autonomous obstacle and cliff detection robot using IR sensors and MSP430 firmware.
 </p>
 
 </div>
-
 
 
 <div class="card">
@@ -404,19 +416,10 @@ Implements sensor based decision logic and embedded firmware control for robotic
 <h3>BreatheSafe</h3>
 
 <p>
-
-ESP32 based health monitoring system using MAX30102 sensor for heart rate tracking.
-
-</p>
-
-<p>
-
-Designed for real-time monitoring with microcontroller firmware and embedded signal processing.
-
+ESP32 + MAX30102 health monitoring firmware for heart rate detection.
 </p>
 
 </div>
-
 
 </div>
 
@@ -436,13 +439,13 @@ Designed for real-time monitoring with microcontroller firmware and embedded sig
 </div>
 
 <div class="stat-box">
-<h3>Embedded</h3>
-<p>Firmware Projects</p>
+<h3>C</h3>
+<p>Primary Language</p>
 </div>
 
 <div class="stat-box">
-<h3>C</h3>
-<p>Primary Language</p>
+<h3>Embedded</h3>
+<p>Firmware Projects</p>
 </div>
 
 <div class="stat-box">
@@ -451,7 +454,6 @@ Designed for real-time monitoring with microcontroller firmware and embedded sig
 </div>
 
 </div>
-
 
 <div class="profile-card">
 
@@ -477,34 +479,55 @@ Open GitHub Profile
 </section>
 
 
+
 <footer>
-
 © 2026 Anora Sharon Tessie
-
 </footer>
 
 
 
 <script>
 
-const sections=document.querySelectorAll("section");
+const cards=document.querySelectorAll(".card");
+const stats=document.querySelectorAll(".stat-box");
 
-window.addEventListener("scroll",()=>{
+function reveal(){
 
-sections.forEach(sec=>{
+cards.forEach((card,i)=>{
 
-if(sec.getBoundingClientRect().top < window.innerHeight-100){
+const top=card.getBoundingClientRect().top;
 
-sec.classList.add("show");
+if(top < window.innerHeight-100){
+
+setTimeout(()=>{
+card.classList.add("show")
+}, i*120);
 
 }
 
 });
 
+stats.forEach((box,i)=>{
+
+const top=box.getBoundingClientRect().top;
+
+if(top < window.innerHeight-100){
+
+setTimeout(()=>{
+box.classList.add("show")
+}, i*120);
+
+}
+
 });
+
+}
+
+window.addEventListener("scroll",reveal);
 
 </script>
 
 
 </body>
 </html>
+```
