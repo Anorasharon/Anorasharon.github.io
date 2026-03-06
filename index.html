@@ -77,7 +77,8 @@ align-items:center;
 .hero-title{
 font-size:55px;
 font-family:'Orbitron';
-animation: glowName 3s ease-in-out infinite alternate;
+color:white;
+animation: glowName 2s ease-in-out infinite alternate;
 }
 
 .hero-title span{
@@ -89,7 +90,16 @@ color:var(--accent);
 @keyframes glowName{
 
 0%{
-text-shadow:0 0 5px var(--accent);
+text-shadow:
+0 0 5px var(--accent),
+0 0 10px var(--accent);
+}
+
+50%{
+text-shadow:
+0 0 15px var(--accent),
+0 0 30px var(--accent),
+0 0 60px var(--accent);
 }
 
 100%{
@@ -99,6 +109,26 @@ text-shadow:
 0 0 40px var(--accent);
 }
 
+}
+  /* TYPING ANIMATION (ADD HERE) */
+
+.typing{
+color:var(--accent);
+border-right:3px solid var(--accent);
+white-space:nowrap;
+overflow:hidden;
+animation:
+typing 3s steps(20),
+blink 0.7s infinite;
+}
+
+@keyframes typing{
+from{width:0}
+to{width:100%}
+}
+
+@keyframes blink{
+50%{border-color:transparent}
 }
 
 .hero-desc{
@@ -247,9 +277,8 @@ color:var(--dim);
 
 <h1 class="hero-title">
 Hi, I'm <br>
-<span>Anora Sharon Tessie</span>
+<span class="typing">Anora Sharon Tessie</span>
 </h1>
-
 <p class="hero-desc">
 
 Embedded Firmware Engineer specializing in real-time embedded systems, interrupt-driven firmware architecture, and hardware-software integration.
