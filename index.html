@@ -13,8 +13,8 @@
 
 :root{
 --bg:#0b0b0f;
---card:#151520;
---accent:#a855f7;
+--card:#12121a;
+--accent:#c084fc;
 --text:#f5f7ff;
 --dim:#9aa3b2;
 }
@@ -27,14 +27,12 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:
-radial-gradient(circle at 20% 30%, rgba(168,85,247,0.15), transparent 40%),
-radial-gradient(circle at 80% 70%, rgba(168,85,247,0.08), transparent 40%),
-#0b0b0f;
-
-color:var(--text);
-scroll-behavior:smooth;
-}
+background:linear-gradient(
+180deg,
+#0b0b0f 0%,
+#0a0a12 50%,
+#090914 100%
+);
 /* NAV */
 
 nav{
@@ -263,6 +261,15 @@ padding:30px;
 border-radius:10px;
 border:1px solid #112240;
 text-align:center;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:20px;
+}
+.profile-card p{
+color:var(--dim);
+font-size:14px;
 }
 
 /* FOOTER */
