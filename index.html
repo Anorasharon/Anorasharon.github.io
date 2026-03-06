@@ -1,23 +1,27 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Anora Sharon Tessie | Embedded Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
+/* ---------- ROOT COLORS ---------- */
+
 :root{
 --bg:#0b0b0f;
---card:#12121a;
+--card:#14141c;
 --accent:#c084fc;
 --text:#f5f7ff;
 --dim:#9aa3b2;
 }
+
+/* ---------- GLOBAL ---------- */
 
 *{
 margin:0;
@@ -30,24 +34,14 @@ body{
 background:linear-gradient(
 180deg,
 #0b0b0f 0%,
-#0a0a12 50%,
+#0a0a12 60%,
 #090914 100%
 );
 color:var(--text);
 scroll-behavior:smooth;
 }
-/* REMOVE ALL BLACK TEXT */
 
-*{
-color:var(--text);
-}
-  h1,h2,h3,h4,h5,h6{
-color:var(--accent);
-}
-  p{
-color:var(--text);
-}
-/* NAV */
+/* ---------- NAV ---------- */
 
 nav{
 position:fixed;
@@ -56,8 +50,10 @@ width:100%;
 padding:20px 60px;
 display:flex;
 justify-content:space-between;
-background:rgba(6,16,33,0.95);
-border-bottom:1px solid #112240;
+align-items:center;
+background:rgba(8,8,12,0.85);
+backdrop-filter:blur(8px);
+border-bottom:1px solid #1c1c28;
 z-index:1000;
 }
 
@@ -68,20 +64,22 @@ margin-left:30px;
 font-size:14px;
 }
 
-/* SECTION */
+/* ---------- SECTION ---------- */
 
 section{
-padding:140px 60px;
+padding:150px 60px;
 max-width:1100px;
 margin:auto;
 }
+
 h2{
 font-family:'Orbitron';
-margin-bottom:40px;
+margin-bottom:45px;
 color:var(--accent);
+font-size:30px;
 }
 
-/* HERO */
+/* ---------- HERO ---------- */
 
 #hero{
 min-height:100vh;
@@ -91,90 +89,36 @@ align-items:center;
 
 .hero-title{
 font-size:64px;
-letter-spacing:1px;
 font-family:'Orbitron';
 color:white;
-animation: glowName 2s ease-in-out infinite alternate;
+line-height:1.2;
 }
 
 .hero-title span{
 color:var(--accent);
 }
 
-/* NAME ANIMATION */
-
-@keyframes glowName{
-
-0%{
-text-shadow:
-0 0 5px var(--accent),
-0 0 10px var(--accent);
+.hero-desc{
+margin-top:25px;
+max-width:720px;
+font-size:16px;
+line-height:1.9;
+color:var(--text);
 }
 
-50%{
-text-shadow:
-0 0 15px var(--accent),
-0 0 30px var(--accent),
-0 0 60px var(--accent);
-}
-
-100%{
-text-shadow:
-0 0 10px var(--accent),
-0 0 20px var(--accent),
-0 0 40px var(--accent);
-}
-
-}
-  /* TYPING ANIMATION (ADD HERE) */
-
-.typing{
-color:var(--accent);
-border-right:3px solid var(--accent);
-white-space:nowrap;
-overflow:hidden;
-animation:
-typing 3s steps(20),
-blink 0.7s infinite;
-}
-
-@keyframes typing{
-from{width:0}
-to{width:100%}
-}
-
-@keyframes blink{
-50%{border-color:transparent}
-}
-
-
+/* ---------- BUTTON ---------- */
 
 .btn{
-padding:12px 25px;
+padding:12px 26px;
 border-radius:6px;
 text-decoration:none;
 font-weight:600;
-margin-top:10px;
+margin-top:25px;
+margin-right:12px;
+display:inline-block;
 transition:0.3s;
 }
-#hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-position:relative;
-}
 
-#hero::before{
-content:"";
-position:absolute;
-width:500px;
-height:500px;
-background:radial-gradient(circle, rgba(0,229,255,0.15), transparent 70%);
-filter:blur(80px);
-top:20%;
-left:10%;
-z-index:-1;
-}
 .btn-primary{
 background:var(--accent);
 color:white;
@@ -185,7 +129,7 @@ border:1px solid var(--accent);
 color:var(--accent);
 }
 
-/* GRID */
+/* ---------- GRID ---------- */
 
 .grid{
 display:grid;
@@ -193,35 +137,31 @@ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
-/* CARD */
+/* ---------- CARD ---------- */
 
 .card{
-
 background:var(--card);
 padding:25px;
 border-radius:10px;
-border:1px solid #112240;
-
-opacity:0;
-transform:translateY(60px);
-
-transition:all 0.6s ease;
-}
-
-.card.show{
-opacity:1;
-transform:translateY(0);
+border:1px solid #1d1d2a;
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.02);
+transform:translateY(-8px);
 border-color:var(--accent);
-box-shadow:0 0 25px rgba(0,212,255,0.4);
+box-shadow:0 0 20px rgba(192,132,252,0.3);
+}
+
+.card h3{
+color:var(--accent);
+margin-bottom:10px;
+font-size:20px;
 }
 
 .card p{
-color:var(--dim);
-margin:10px 0;
+color:var(--text);
+margin-bottom:8px;
 font-size:14px;
 }
 
@@ -229,15 +169,21 @@ font-size:14px;
 color:var(--accent);
 text-decoration:none;
 }
-.card h3{
-color:var(--accent);
-font-size:20px;
-margin-bottom:10px;
+
+/* ---------- ABOUT ---------- */
+
+#about{
+padding-top:180px;
 }
-  .card p{
+
+#about p{
+max-width:720px;
+line-height:1.9;
+margin-bottom:20px;
 color:var(--text);
 }
-/* GITHUB */
+
+/* ---------- GITHUB ---------- */
 
 .stats{
 display:grid;
@@ -251,16 +197,7 @@ background:var(--card);
 padding:30px;
 border-radius:10px;
 text-align:center;
-border:1px solid #112240;
-color:var(--text);
-opacity:0;
-transform:translateY(60px);
-transition:0.6s;
-}
-
-.stat-box.show{
-opacity:1;
-transform:translateY(0);
+border:1px solid #1d1d2a;
 }
 
 .stat-box h3{
@@ -268,60 +205,26 @@ font-family:'Orbitron';
 color:var(--accent);
 font-size:28px;
 }
-#about h2{
-margin-bottom:50px;
-font-size:32px;
-}
-#about{
-padding-top:180px;
-padding-bottom:120px;
-}
 
-#about p{
-max-width:750px;
-line-height:1.9;
-font-size:16px;
-margin-bottom:22px;
-color:var(--text);
-}
 .profile-card{
 background:var(--card);
 padding:40px;
 border-radius:10px;
-border:1px solid #112240;
+border:1px solid #1d1d2a;
 text-align:center;
+}
 
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-gap:25px;
-}
-.github-link{
-color:var(--dim);
-font-size:15px;
-letter-spacing:0.5px;
-}
-  
 .profile-card p{
 color:var(--dim);
-font-size:14px;
+margin-bottom:15px;
 }
-.github-link{
-color:var(--text);
-}
-  .stat-box h3{
-color:var(--accent);
-}
-  .card a{
-color:#c084fc;
-}
-/* FOOTER */
+
+/* ---------- FOOTER ---------- */
 
 footer{
 text-align:center;
 padding:40px;
-border-top:1px solid #112240;
+border-top:1px solid #1c1c28;
 color:var(--dim);
 }
 
@@ -345,59 +248,51 @@ color:var(--dim);
 </nav>
 
 
+<!-- HERO -->
+
 <section id="hero">
 
 <div>
 
 <h1 class="hero-title">
 Hi, I'm <br>
-<span class="typing">Anora Sharon Tessie</span>
+<span>Anora Sharon Tessie</span>
 </h1>
-<p class="hero-desc">
 
 <p class="hero-desc">
-Embedded Firmware Engineer specializing in real-time embedded systems, low-level firmware development, and hardware–software integration. Experienced in designing interrupt-driven architectures and implementing efficient firmware on microcontroller platforms such as MSP430 and ESP32 using Embedded C.
-</p>
-
-<p class="hero-desc">
-My work focuses on developing reliable embedded systems involving sensor interfacing, GPIO configuration, motor control, and event-driven system design. I emphasize system-level debugging, performance optimization, and robust firmware architecture for resource-constrained devices.
-</p>
-
-<p class="hero-desc">
-In addition to firmware development, I explore Edge AI and TinyML techniques to deploy lightweight machine learning models directly on embedded hardware, enabling intelligent and low-latency decision making at the device level.
+Embedded firmware enthusiast passionate about real-time embedded systems, low-level programming, and hardware-software integration. I enjoy designing efficient firmware and exploring how systems work internally.
 </p>
 
 <a href="#projects" class="btn btn-primary">View Projects</a>
-
-<a href="https://github.com/Anorasharon" target="_blank" class="btn btn-outline">
-GitHub Profile
-</a>
+<a href="https://github.com/Anorasharon" target="_blank" class="btn btn-outline">GitHub Profile</a>
 
 </div>
 
 </section>
 
 
+<!-- ABOUT -->
 
 <section id="about">
 
 <h2>About Me</h2>
 
 <p>
-I am an undergraduate student at <b>SSN College of Engineering</b> (2023–2027) with a strong interest in embedded systems and low-level software development. My primary focus is on designing efficient firmware and understanding how hardware and software interact in resource-constrained systems.
+I am currently pursuing my undergraduate degree at <b>SSN College of Engineering</b> (2023–2027). My main interest lies in embedded systems and low-level software development.
 </p>
 
 <p>
-I am particularly interested in microcontroller-based systems, interrupt-driven architectures, and real-time system design. I enjoy exploring concepts related to operating systems such as memory management, task scheduling, and system-level debugging, which help me better understand how embedded systems operate internally.
+I enjoy working with microcontrollers, designing interrupt-driven firmware, and understanding system-level concepts such as memory management, scheduling, and operating system internals.
 </p>
 
 <p>
-Outside of engineering, I enjoy painting. While I would not call myself a professional artist, painting helps me think creatively and approach technical problems with a different perspective.
+Outside engineering, I enjoy painting. While I am not a professional artist, painting allows me to think creatively and approach technical problems from a different perspective.
 </p>
 
 </section>
 
 
+<!-- SKILLS -->
 
 <section id="skills">
 
@@ -406,50 +301,35 @@ Outside of engineering, I enjoy painting. While I would not call myself a profes
 <div class="grid">
 
 <div class="card">
-
 <h3>Embedded Systems</h3>
-
 <p>Embedded C</p>
 <p>MSP430</p>
 <p>ESP32</p>
 <p>Interrupt Handling</p>
-
 </div>
 
-
 <div class="card">
-
-<h3>Firmware Expertise</h3>
-
-<p>Interrupt Driven Architecture</p>
+<h3>Firmware</h3>
+<p>Driver Programming</p>
 <p>Low Level Debugging</p>
-<p>Driver Level Programming</p>
-<p>Memory Handling</p>
-
+<p>Real-Time Systems</p>
+<p>Event Driven Design</p>
 </div>
 
-
 <div class="card">
-
 <h3>Programming</h3>
-
-<p>C Programming</p>
+<p>C</p>
 <p>Python</p>
 <p>Data Structures</p>
-<p>Bitwise Operations</p>
-
+<p>Bit Manipulation</p>
 </div>
 
-
 <div class="card">
-
 <h3>Edge AI</h3>
-
-<p>Image Classification</p>
 <p>CNN Models</p>
+<p>Image Classification</p>
 <p>TinyML</p>
 <p>Edge Deployment</p>
-
 </div>
 
 </div>
@@ -457,6 +337,7 @@ Outside of engineering, I enjoy painting. While I would not call myself a profes
 </section>
 
 
+<!-- PROJECTS -->
 
 <section id="projects">
 
@@ -465,143 +346,47 @@ Outside of engineering, I enjoy painting. While I would not call myself a profes
 <div class="grid">
 
 <div class="card">
-
-<h3>Address Book Management System</h3>
-
-<p>
-CLI contact manager written in C with modular architecture and CSV file persistence.
-</p>
-
-<a href="https://github.com/Anorasharon/Addressbook-management-system" target="_blank">
-View on GitHub →
-</a>
-
+<h3>Address Book Manager</h3>
+<p>CLI contact manager built in C using modular architecture and CSV storage.</p>
+<a href="https://github.com/Anorasharon/Addressbook-management-system" target="_blank">View on GitHub →</a>
 </div>
 
-
 <div class="card">
-
 <h3>LSB Image Steganography</h3>
-
-<p>
-Hide and extract secret messages inside BMP images using LSB bit manipulation.
-</p>
-
-<a href="https://github.com/Anorasharon/LSB-steganography" target="_blank">
-View on GitHub →
-</a>
-
+<p>Hide and extract messages inside BMP images using LSB manipulation.</p>
+<a href="https://github.com/Anorasharon/LSB-steganography" target="_blank">View on GitHub →</a>
 </div>
 
-
 <div class="card">
-
 <h3>Arbitrary Precision Calculator</h3>
-
-<p>
-Perform arithmetic on extremely large integers using Doubly Linked Lists.
-</p>
-
-<a href="https://github.com/Anorasharon/Arbitrary-Precision-Calculator" target="_blank">
-View on GitHub →
-</a>
-
+<p>Perform operations on extremely large integers using linked lists.</p>
+<a href="https://github.com/Anorasharon/Arbitrary-Precision-Calculator" target="_blank">View on GitHub →</a>
 </div>
-
 
 <div class="card">
-
-<h3>Autonomous Obstacle & Cliff Avoidance Robot</h3>
-
-<p>
-Autonomous mobile robot built using MSP430 LaunchPad, L298N motor driver, and IR sensors for obstacle and cliff detection.
-</p>
-
-<p>
-Implements sensor-driven navigation logic with GPIO-based motor control, real-time decision making, and embedded C firmware.
-</p>
-
-<a href="https://github.com/Anorasharon/msp430-obstacle-cliff-avoidance-robot" target="_blank">
-View on GitHub →
-</a>
-
+<h3>Autonomous Obstacle Robot</h3>
+<p>MSP430 robot using IR sensors and motor control for obstacle & cliff detection.</p>
+<a href="https://github.com/Anorasharon/msp430-obstacle-cliff-avoidance-robot" target="_blank">View on GitHub →</a>
 </div>
-  
-
 
 <div class="card">
-
-<h3>Interrupt-Driven Event Processing System</h3>
-
-<p>
-Real-time embedded system built using ESP32 and FreeRTOS where a PIR sensor interrupt triggers an ISR that communicates events to a task using FreeRTOS queues.
-</p>
-
-<p>
-Demonstrates ISR-to-task communication, state machine design, cooldown logic, and event-driven firmware architecture.
-</p>
-
-<a href="https://github.com/Anorasharon/interrupt-driven-event-processing-system" target="_blank">
-View on GitHub →
-</a>
-
+<h3>Interrupt Event System</h3>
+<p>ESP32 + FreeRTOS system demonstrating ISR-to-task communication.</p>
+<a href="https://github.com/Anorasharon/interrupt-driven-event-processing-system" target="_blank">View on GitHub →</a>
 </div>
 
-  <div class="card">
-
-<h3>BreatheSafe – Edge AI Health Monitoring</h3>
-
-<p>
-Edge AI healthcare prototype built using ESP32 and MAX30102 sensor to measure heart rate and SpO₂ in real time.
-</p>
-
-<p>
-Uses an on-device SVM model to classify health risk levels (No Risk / Low Risk / High Risk) without cloud connectivity.
-</p>
-
-<a href="https://github.com/Anorasharon/BreatheSafe-Predictive-Healthcare-with-Edge-AI" target="_blank">
-View on GitHub →
-</a>
-
-</div>
 <div class="card">
-
-<h3>Cleaning Up With AI – Garbage Classification</h3>
-
-<p>
-Deep learning image classification system that categorizes waste into cardboard, metal, paper, plastic, and glass.
-</p>
-
-<p>
-Built using MobileNetV2 with transfer learning, data augmentation, and class balancing techniques.
-</p>
-
-<a href="https://github.com/Anorasharon/Cleaning-Up-with-AI" target="_blank">
-View on GitHub →
-</a>
-
+<h3>BreatheSafe</h3>
+<p>Edge AI health monitor using ESP32 + MAX30102 with on-device SVM model.</p>
+<a href="https://github.com/Anorasharon/BreatheSafe-Predictive-Healthcare-with-Edge-AI" target="_blank">View on GitHub →</a>
 </div>
-<div class="card">
-
-<h3>Mask Guardian – Real-Time Mask Detection</h3>
-
-<p>
-Computer vision system that detects whether people are wearing masks using a webcam feed.
-</p>
-
-<p>
-Built using MobileNetV2, TensorFlow, and OpenCV for real-time face mask classification.
-</p>
-
-<a href="https://github.com/Anorasharon/-Face-Mask-Detection-Using-Deep-Learning" target="_blank">
-View on GitHub →
-</a>
 
 </div>
 
 </section>
 
 
+<!-- GITHUB -->
 
 <section id="github">
 
@@ -632,18 +417,14 @@ View on GitHub →
 </div>
 
 <div class="profile-card">
-
-<p class="github-link">github.com/Anorasharon</p>
-
-<a href="https://github.com/Anorasharon" target="_blank" class="btn btn-primary">
-Open GitHub Profile
-</a>
-
+<p>github.com/Anorasharon</p>
+<a href="https://github.com/Anorasharon" target="_blank" class="btn btn-primary">Open GitHub Profile</a>
 </div>
 
 </section>
 
 
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -656,55 +437,9 @@ Open GitHub Profile
 </section>
 
 
-
 <footer>
 © 2026 Anora Sharon Tessie
 </footer>
 
-
-
-<script>
-
-const cards=document.querySelectorAll(".card");
-const stats=document.querySelectorAll(".stat-box");
-
-function reveal(){
-
-cards.forEach((card,i)=>{
-
-const top=card.getBoundingClientRect().top;
-
-if(top < window.innerHeight-100){
-
-setTimeout(()=>{
-card.classList.add("show")
-}, i*120);
-
-}
-
-});
-
-stats.forEach((box,i)=>{
-
-const top=box.getBoundingClientRect().top;
-
-if(top < window.innerHeight-100){
-
-setTimeout(()=>{
-box.classList.add("show")
-}, i*120);
-
-}
-
-});
-
-}
-
-window.addEventListener("scroll",reveal);
-
-</script>
-
-
 </body>
 </html>
-```
